@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS objects</title>
+</head>
+<body>
+
+
+</body>
+</html>
+<script  type="text/javascript">
+
+    var codeSpace = [
+
+        {
+            Name: "Clint",
+            Surname: "Clark",
+            age: 30,
+            eyeColor: "blue",
+            occupation: [' founder', ' director', ' head teacher']
+        },
+        {
+            Name: "Nathan",
+            Surname: "Banda",
+            age: 28,
+            eyeColor: "brown",
+            occupation: ['facilitator', 'teacher']
+        },
+
+        {
+            Name: "Stefan",
+            Surname: "louw",
+            age: 29,
+            eyeColor: "green",
+            occupation: ['adviser', 'treasurer']
+
+        }
+    ];
+
+
+    codeSpace.forEach(function (codeSpace_team,team_key){
+        document.write('<h1>'+codeSpace_team.Name+'</h1>' );
+
+        if (codeSpace_team.age<30){
+            document.write('<h4>'+ codeSpace_team.Name+" is far from retiring</h4>");
+            document.write('<br/>');
+
+
+        }else{
+
+            document.write('<h4>'+ codeSpace_team.Name+ " is a bit older than the rest</h4>");
+
+        }
+
+        codeSpace_team.occupation.forEach(function (occupation_value,occu_key) {
+
+            document.write('programme '+occupation_value);
+            document.write('<br/>');
+        })
+    } );
+
+
+
+
+</script>
